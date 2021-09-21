@@ -36,9 +36,9 @@ namespace GithubApiProject
             services.AddSingleton<IGithubApiService, GithubApiService>();
 
             //If I decide to use a database
-            //services.AddDbContext<GithubRepoDB>(
-            //    opt => opt.UseSqlServer(Configuration.GetConnectionString("GithubRepoDB"))
-            //    );
+            services.AddDbContext<GithubRepoDbContext>(
+                opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

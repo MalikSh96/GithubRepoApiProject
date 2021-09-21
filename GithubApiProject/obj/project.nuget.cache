@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zFS6neU+z1BrpUwh4K2HdtIY+2MaB+r9pc+o8MKkwtIA9trxwL1jh8uUoDY90cSSbbdMq7JYtUE8kkT130bsJQ==",
+  "dgSpecHash": "kydObQUZ3wzeESA319qyu8xY3V2m1LFukqr91pCTIEt3mWMsaWYNQcXfThk8AcYN0g2DLZ2xhyRBc/4ykyvwRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\malik\\OneDrive\\Documents\\Projects\\GithubApiProject\\GithubApiProject\\GithubApiProject.csproj",
   "expectedPackageFiles": [
@@ -26,8 +26,8 @@
     "C:\\Users\\malik\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.10\\microsoft.entityframeworkcore.analyzers.5.0.10.nupkg.sha512",
     "C:\\Users\\malik\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.10\\microsoft.entityframeworkcore.design.5.0.10.nupkg.sha512",
     "C:\\Users\\malik\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.10\\microsoft.entityframeworkcore.relational.5.0.10.nupkg.sha512",
-    "C:\\Users\\malik\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.9\\microsoft.entityframeworkcore.sqlserver.5.0.9.nupkg.sha512",
-    "C:\\Users\\malik\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.9\\microsoft.entityframeworkcore.tools.5.0.9.nupkg.sha512",
+    "C:\\Users\\malik\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.10\\microsoft.entityframeworkcore.sqlserver.5.0.10.nupkg.sha512",
+    "C:\\Users\\malik\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.10\\microsoft.entityframeworkcore.tools.5.0.10.nupkg.sha512",
     "C:\\Users\\malik\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\malik\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\malik\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
