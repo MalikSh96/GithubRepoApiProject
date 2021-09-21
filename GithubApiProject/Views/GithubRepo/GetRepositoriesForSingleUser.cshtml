@@ -1,0 +1,33 @@
+﻿@model IEnumerable<GithubApiProject.Models.GithubRepo>
+
+@{
+    ViewData["Title"] = "GetRepositoriesForSingleUser";
+}
+<head>
+    <link href="~/css/styling.css" rel="stylesheet" />
+</head>
+<h1>Repositories for your entered user: 
+    @{
+        string username = ViewBag.Username;
+    }
+    @username
+</h1>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>Path</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var repo in ViewBag.GithubRepo)
+            {
+                <tr>
+                    <td>@repo.Name</td>
+                    <td><a href="@repo.Html_url">Link to Github Repository</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

@@ -1,0 +1,19 @@
+﻿@model GithubApiProject.Models.GithubRepo
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Github Repositories Collector</h2>
+
+    <form action="/">
+        <p>Enter username:</p>
+        <input type="text" asp-for="Username" required="required"><br>
+        <button asp-controller="githubrepo" asp-action="GetRepositoriesForSingleUser" type="submit">
+            Get Repositories
+        </button>
+    </form>
+</body>
+</html>

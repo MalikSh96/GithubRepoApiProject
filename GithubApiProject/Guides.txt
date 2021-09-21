@@ -1,0 +1,13 @@
+https://docs.github.com/en/rest/reference/repos#get-a-repository
+
+https://stackoverflow.com/questions/8713596/how-to-retrieve-the-list-of-all-github-repositories-of-a-person
+
+https://stackoverflow.com/questions/51094047/how-to-use-github-api-on-a-asp-net-mvc-app/51095023?fbclid=IwAR3oYnO7UrSrJjLc-37e2vKys9WYJZo_Gko-neApb1GeWQcOlqtjbIwEWeo
+
+https://www.youtube.com/watch?v=3J9Cs9ybZDg&ab_channel=DanielDonbavand
+
+https://stackoverflow.com/questions/39907742/github-api-is-responding-with-a-403-when-using-requests-request-function
+
+https://stackoverflow.com/questions/10057334/when-should-i-use-the-using-statement
+
+https://codepen.io/munjewar/pen/vVKrYp
