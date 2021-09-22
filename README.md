@@ -46,9 +46,9 @@ are framework services injected by built-in IoC container
 - A DI (Dependency-Injection) or IoC container needs to instantiate objects (dependencies) and provide them to the application
 - To do so, it must deal with constructor injection, setter injection, and interface injection
 - The built-in IoC container supports three kinds of lifetimes
-	1. Singleton: IoC container will create and share a single instance of a service throughout the application's lifetime
-	2. Transient: The IoC container will create a new instance of the specified service type every time you ask for it
-	3. Scoped: IoC container will create an instance of the specified service type once per request and will be shared in a single request
+	1. *Singleton*: IoC container will create and share a single instance of a service throughout the application's lifetime
+	2. *Transient*: The IoC container will create a new instance of the specified service type every time you ask for it
+	3. *Scoped*: IoC container will create an instance of the specified service type once per request and will be shared in a single request
 - Once we register a service, the IoC container automatically performs constructor injection if a service type is 
 included as a parameter in a constructor.
 ```
@@ -66,9 +66,48 @@ namespace GithubApiProject.Controllers
     }
 }
 ```
+#### DIP (Dependency Inversion Principle)
+DIP definition:
+    1. High-level modules should not depend on low-level modules. Both should depend on the abstraction
+    2. Abstractions should not depend on details. Details should depend on abstractions
+- A high-level module is a module which depends on other modules
+- To achieve a level of *abstraction* in programming, it means to create an interface or an abstract class which is non-concrete
+- `GithubRepoController` is a *high-level* module which "depends" on `GithubApiService` which is low-level module in this context
+- `GithubApiService` is a concrete class and `IGithubApiService` is an abstraction, ie. non-concrete
+- Both classes should depend on abstractions, meaning both classes should depend on an interface or an abstract class
+- The advantages of implementing *DIP* is that the `GithubRepoController` and `GithubApiService` classes are loosely 
+coupled classes because `GithubRepoController` does not depend on the concrete `GithubApiService` class, instead it includes a 
+reference of the `IGithubApiService` interface. So now, if one potentially wanted to use another class, then one can easily use
+another class which implements `IGithubApiService` with a different implementation
 
 #### DI (Dependency-Injection)
 - Dependency Injection (DI) is a design pattern which implements the IoC principle to invert the creation of dependent objects
 - Using DI, we move the creation and binding of the dependent objects outside of the class that depends on them
+- The Dependency Injection pattern involves 3 types of classes.
+    1. *Client* Class: The client class (dependent class) is a class which depends on the service class
+    2. *Service* Class: The service class (dependency) is a class that provides service to the client class.
+    3. *Injector* Class: The injector class injects the service class object into the client class.
+- The injector class injects dependencies broadly in three ways: through a constructor, through a property, or through a method
+    1. *Constructor* Injection: In the constructor injection, the injector supplies the service (dependency) 
+    through the client class constructor
+    ```
+    public GithubRepoController(IGithubApiService githubApiService)
+    {
+        _githubApiService = githubApiService;
+    }
+    ```
+    2. *Property* Injection: In the property injection (aka the Setter Injection), the injector supplies the dependency through 
+    a public property of the client class
+    3. *Method* Injection: In this type of injection, the client class implements an interface which declares the method(s) to supply the dependency and the 
+    injector uses this interface to supply the dependency to the client class
 
+#### IoC Container
+Read [Here](https://www.tutorialsteacher.com/ioc/ioc-container)
+
+## Objective of IoC, DIP, DI
+- The whole objective is to minimize code dependency, module dependency
+- It is all to achieve *"loosely coupled"* design/code/classes
+
+##### Helpful links
+About [IoC](https://www.tutorialsteacher.com/ioc) 
 
