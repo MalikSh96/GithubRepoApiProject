@@ -13,5 +13,6 @@ namespace GithubApiProject.Models
         public string Name { get; set; } //repo name
         public string Full_name { get; set; } //owner+repo name
         public string Html_url { get; set; } //url for the repo
+        public string Login { get; set; } //repo owner also
     }
 }
