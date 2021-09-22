@@ -11,7 +11,7 @@ CSS files, image files, and JavaScript files
 - The name `wwwroot` is not unique, and can be changed to your desire, but remember to make that change everywhere the `wwwroot`
 is applied
 
-### `Program.cs`
+#### `Program.cs`
 - ASP.NET Core web applications requires a *host* to be executed 
 - The application starts executing from the entry point `public static void Main()` 
 in `Program` class where one can create a host for the web application
@@ -19,7 +19,7 @@ in `Program` class where one can create a host for the web application
 - Whatever *code* you write inside `Program.cs`, inside its method will be executed in that same order
 - The application will **NOT** run without `Program.cs`, it will return a build error
 
-### `Startup.cs`
+#### `Startup.cs`
 - ASP.NET Core applications must include Startup class
 - `Startup.cs` is executed first when the application starts
 - Includes two public methods: `ConfigureServices` and `Configure`
@@ -41,7 +41,7 @@ performance of your application
 - The parameters specified in the custom `Configure(IApplicationBuilder paramName, IWebHostEnvironment paramName)` 
 are framework services injected by built-in IoC container
 
-#### IoC (Inversion-of-Control)
+### IoC (Inversion-of-Control)
 - IoC means that one code calls another
 - A DI (Dependency-Injection) or IoC container needs to instantiate objects (dependencies) and provide them to the application
 - To do so, it must deal with constructor injection, setter injection, and interface injection
@@ -66,7 +66,7 @@ namespace GithubApiProject.Controllers
     }
 }
 ```
-#### DIP (Dependency Inversion Principle)
+### DIP (Dependency Inversion Principle)
 DIP definition:
     1. High-level modules should not depend on low-level modules. Both should depend on the abstraction
     2. Abstractions should not depend on details. Details should depend on abstractions
@@ -80,7 +80,7 @@ coupled classes because `GithubRepoController` does not depend on the concrete `
 reference of the `IGithubApiService` interface. So now, if one potentially wanted to use another class, then one can easily use
 another class which implements `IGithubApiService` with a different implementation
 
-#### DI (Dependency-Injection)
+### DI (Dependency-Injection)
 - Dependency Injection (DI) is a design pattern which implements the IoC principle to invert the creation of dependent objects
 - Using DI, we move the creation and binding of the dependent objects outside of the class that depends on them
 - The Dependency Injection pattern involves 3 types of classes.
@@ -101,13 +101,22 @@ another class which implements `IGithubApiService` with a different implementati
     3. *Method* Injection: In this type of injection, the client class implements an interface which declares the method(s) to supply the dependency and the 
     injector uses this interface to supply the dependency to the client class
 
-#### IoC Container
+### IoC Container
 Read [Here](https://www.tutorialsteacher.com/ioc/ioc-container)
 
-## Objective of IoC, DIP, DI
+## Objective of IoC, DIP, DI and IoC Container
 - The whole objective is to minimize code dependency, module dependency
 - It is all to achieve *"loosely coupled"* design/code/classes
 
+#### Difference between IoC (Inversion-of-Control) and DI (Dependency-Injection)
+- IoC is a principle and DI is a pattern
+- IoC is the principle where the control flow of a program is inverted: instead of the 
+programmer controlling the flow of a program, the external sources (framework, services, other components) take control of it
+- Dependency Injection is a design pattern which implements IoC principle
+- DI provides objects that an object needs. Let’s say, class *X* is dependent on *Y*. So rather than creating object of *Y* within 
+the class *"X"*, we can inject the dependencies via a constructor or setter injection
+
 ##### Helpful links
 About [IoC](https://www.tutorialsteacher.com/ioc) 
+Difference between [IoC and DI](https://www.tutorialspoint.com/difference-between-ioc-and-dependency-injection-in-spring)
 
