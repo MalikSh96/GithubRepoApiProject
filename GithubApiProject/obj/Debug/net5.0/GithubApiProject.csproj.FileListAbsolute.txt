@@ -415,6 +415,7 @@ C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\GithubApiProject.TagHelpers.input.cache
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\GithubApiProject.TagHelpers.output.cache
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\GithubApiProject.RazorCoreGenerate.cache
+C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\Razor\Views\ErrorHandler\Error404.cshtml.g.cs
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\Razor\Views\GithubRepo\GetRepositoriesForSingleUser.cshtml.g.cs
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\Razor\Views\GithubRepo\Index.cshtml.g.cs
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs

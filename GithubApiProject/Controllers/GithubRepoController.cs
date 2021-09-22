@@ -36,7 +36,10 @@ namespace GithubApiProject.Controllers
             IEnumerable<GithubRepo> result = await _githubApiService.GetRepositoriesForGivenUser(Username);
             ViewBag.Username = Username; //to retrieve the name of the inputted user
             //ViewBag.GithubRepo = result; //to be able to display data on page
-            return View(result);
+            if(result.Count() > 0) //if we get repos back
+                return View(result);
+            else
+                return RedirectToAction("Error404", "ErrorHandler", null);
         }
     }
 }

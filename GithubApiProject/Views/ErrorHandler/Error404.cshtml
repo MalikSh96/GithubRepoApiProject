@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Error404";
+}
+<head>
+    <link href="~/css/ErrorStyling.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'>
+</head>
+<body>
+    <section class="page_404">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <div class="col-sm-10 col-sm-offset-1  text-center">
+                        <div class="four_zero_four_bg">
+                            <h1 class="text-center ">404</h1>
+                        </div>
+
+                        <div class="contant_box_404">
+                            <h3 class="h2">
+                                Looks like the USER you have entered does not exist
+                            </h3>
+
+                            <p>OR the USER has no repositories as of now</p>
+
+                            <a asp-controller="githubrepo" asp-action="Index" class="link_404">Go to Search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
