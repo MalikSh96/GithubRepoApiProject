@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace GithubApiProject.Models
 {
-    public class GithubRepoDbContext : DbContext
+    public class GithubRepoDB : DbContext
     {
         //Every time you create a Db context class, you need an empty constructor
         //Since we are using Core, we need dependency injection
         //Which also will invoke base class constructor
-        public GithubRepoDbContext(DbContextOptions<GithubRepoDbContext> options) : base(options)
+        public GithubRepoDB(DbContextOptions<GithubRepoDB> options) : base(options)
         {
 
         }

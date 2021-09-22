@@ -16,14 +16,16 @@
     <table>
         <thead>
             <tr>
+                <th>Owner</th>
                 <th>Project Name</th>
                 <th>Path</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var repo in ViewBag.GithubRepo)
+            @foreach (var repo in Model)
             {
                 <tr>
+                    <td>@username</td>
                     <td>@repo.Name</td>
                     <td><a href="@repo.Html_url">Link to Github Repository</a></td>
                 </tr>

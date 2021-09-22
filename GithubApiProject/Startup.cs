@@ -36,7 +36,7 @@ namespace GithubApiProject
             services.AddSingleton<IGithubApiService, GithubApiService>();
 
             //If I decide to use a database
-            services.AddDbContext<GithubRepoDbContext>(
+            services.AddDbContext<GithubRepoDB>(
                 opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
                 );
         }

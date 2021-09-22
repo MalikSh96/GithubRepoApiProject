@@ -9,7 +9,7 @@ namespace GithubApiProject.Models
     public class UserRepository
     {
         //Setting fk restraints
-        [ForeignKey("GithuRepo")]
+        //[ForeignKey("GithuRepo")]
         public string RepositoryName { get; set; } //name of repository
 
         //One repository can have one user

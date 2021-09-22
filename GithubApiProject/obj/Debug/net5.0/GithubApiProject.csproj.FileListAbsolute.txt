@@ -433,3 +433,4 @@ C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\ref\GithubApiProject.dll
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\GithubApiProject.pdb
 C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\GithubApiProject.genruntimeconfig.cache
+C:\Users\malik\OneDrive\Documents\Projects\GithubApiProject\GithubApiProject\obj\Debug\net5.0\GithubApiProject.csproj.AssemblyReference.cache
