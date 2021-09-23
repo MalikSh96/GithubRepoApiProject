@@ -34,7 +34,7 @@ namespace GithubApiProject.Services
                 //Represents a HTTP response message, includes status code and data
                 using (HttpResponseMessage response = client.GetAsync(url).Result) //HttpClient has async method
                 {
-                    response.EnsureSuccessStatusCode();
+                    response.EnsureSuccessStatusCode(); //need to make sure we get a successful response
                     /*
                         Because we are using async, we need to ready out the response that we get
                         back and deserialize it from json object to our GithubRepository model
@@ -44,6 +44,7 @@ namespace GithubApiProject.Services
                     {
                         json = await content.ReadAsStringAsync();
                     }
+                    //we deserialize the json data to our desired type
                     IEnumerable<GithubRepo> repos = JsonConvert.DeserializeObject<IEnumerable<GithubRepo>>(json);
                     return repos;
                 }
