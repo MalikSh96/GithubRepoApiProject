@@ -11,3 +11,5 @@ https://stackoverflow.com/questions/39907742/github-api-is-responding-with-a-403
 https://stackoverflow.com/questions/10057334/when-should-i-use-the-using-statement
 
 https://codepen.io/munjewar/pen/vVKrYp
+
+https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences

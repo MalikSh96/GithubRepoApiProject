@@ -31,7 +31,12 @@ namespace GithubApiProject
             /*
                 We need to implement our dependency injection, we need
                 to bind our interfaces with our classes to allow us to inject them
-                and use them in each class
+                and use them in each class.
+
+                Since we are only making a "single" call during our request we are using the Singleton, though using
+                Scoped could also be an option without any complaints.
+                If we were making multiple calls during our request, we then can use scoped lifetime, as it keeps 
+                the same repository object in the memory and reuses multiple times within the same Http Request context
             */
             services.AddSingleton<IGithubApiService, GithubApiService>();
 

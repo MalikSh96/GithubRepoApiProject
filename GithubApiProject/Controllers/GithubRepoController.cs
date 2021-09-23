@@ -17,6 +17,8 @@ namespace GithubApiProject.Controllers
         private readonly IGithubApiService _githubApiService;
 
         //Constructor injection, IoC pattern
+        //DI type, constructor injection
+        //GithubRepoController is the client class - IGithubApiService is the injector class that injects its service
         public GithubRepoController(IGithubApiService githubApiService)
         {
             _githubApiService = githubApiService;

@@ -116,7 +116,17 @@ programmer controlling the flow of a program, the external sources (framework, s
 - DI provides objects that an object needs. Let’s say, class *X* is dependent on *Y*. So rather than creating object of *Y* within 
 the class *"X"*, we can inject the dependencies via a constructor or setter injection
 
+### Middleware
+- A middleware is nothing but a **component** (class) which is executed on every request in ASP.NET Core application
+- Typically, there will be multiple middleware in ASP.NET Core web application. It can be either framework provided middleware, added via NuGet 
+or your own custom middleware
+- Each middleware adds or modifies http request and optionally passes control to the next middleware component
+- To configure multiple middleware, use `Use()` extension method. It is similar to `Run()` method except that it includes next 
+parameter to invoke next middleware in the sequence. Since `Run()` will only *use* its first call and not reach the next ones in the sequence
+
 ##### Helpful links
 About [IoC](https://www.tutorialsteacher.com/ioc) 
 Difference between [IoC and DI](https://www.tutorialspoint.com/difference-between-ioc-and-dependency-injection-in-spring)
+About [Middleware](https://www.tutorialsteacher.com/core/aspnet-core-middleware)
+In depth about [DI](https://auth0.com/blog/dependency-injection-in-dotnet-core/)
 
