@@ -9,6 +9,5 @@ namespace GithubApiProject.Services
     public interface IGithubApiService
     {
         Task<IEnumerable<GithubRepo>> GetRepositoriesForGivenUser(string Username);
-        Task<GithubRepo> GetOwnerName(string Username);
     }
 }

@@ -39,11 +39,6 @@ namespace GithubApiProject
                 the same repository object in the memory and reuses multiple times within the same Http Request context
             */
             services.AddSingleton<IGithubApiService, GithubApiService>();
-
-            //If I decide to use a database
-            //services.AddDbContext<GithubRepoDB>(
-            //    opt => opt.UseSqlServer(Configuration.GetConnectionString("GithubRepoDB"))
-            //    );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -50,33 +50,5 @@ namespace GithubApiProject.Services
                 }
             }
         }
-
-        //This will get only the username/owner
-        public async Task<GithubRepo> GetOwnerName(string Username)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                var url = new Uri($"https://api.github.com/users/{Username}");
-                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-                client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");//Set the User Agent to "request"
-
-                using (HttpResponseMessage response = client.GetAsync(url).Result) //HttpClient has async method
-                {
-                    response.EnsureSuccessStatusCode();
-                    /*
-                        Because we are using async, we need to ready out the response that we get
-                        back and deserialize it from json object to our GithubRepository model
-                    */
-                    string json;
-                    using (var content = response.Content)
-                    {
-                        json = await content.ReadAsStringAsync();
-                    }
-                    GithubRepo owner = JsonConvert.DeserializeObject<GithubRepo>(json);
-                    return owner;
-                }
-            }
-        }
     }
 }
