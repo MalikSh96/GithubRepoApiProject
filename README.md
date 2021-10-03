@@ -58,7 +58,7 @@ namespace GithubApiProject.Controllers
     {
         private readonly IGithubApiService _githubApiService;
 
-        //Constructor injection, IoC pattern
+        //Constructor injection, IoC principle
         public GithubRepoController(IGithubApiService githubApiService)
         {
             _githubApiService = githubApiService;
